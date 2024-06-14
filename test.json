@@ -1,0 +1,45 @@
+{
+  "modelId": "meta.llama2-70b-chat-v1",
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "[INST]You are a a very intelligent bot with exceptional critical thinking[/INST]\nI went to the market and bought 10 apples. I gave 2 apples to your friend and 2 to the helper. I then went and bought 5 more apples and ate 1. How many apples did I remain with?\n\nLet's think step by step."
+        }
+      ]
+    }
+  ],
+  "inferenceConfig": {
+    "maxTokens": 512,
+    "temperature": 0.5,
+    "topP": 0.9
+  },
+  "additionalModelRequestFields": {}
+  }
+
+{
+  "modelId": "anthropic.claude-v2",
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "Human: You are an expert social media content generator. Draft an exciting and socially-\nengaging blog post for a major travel website and newsletter. The post should be a travel guide\nfor Iceland that highlights recommended attractions, restaurants, and sights to see, along\nwith tips and tricks for travel.\nEach paragraph should focus on a different topic, such as travel tips & tricks, best sights to\nsee, best food to eat, and so on. Within each topic, whenever there is a list (such as a list of\nfoods or a list of places), make each item on the list its own line with its own short\ndescription. Name each thematic paragraph with just the name of the paragraph (NEVER a marker\nlike \"paragraph 1\" etc.). Include a call to action to buy tickets now at the end of the post.\nThe audience for this text is people excited to travel but who have never been to Iceland\nbefore. The goal of the article is to drum up excitement for Iceland and leave readers with the\nimpression that the travel website is a trusted source of information for travel to Iceland.\nWrite your response in markdown format.\nNEVER generate text before the article. Generate the article only (including the title).\nAssistant:"
+        }
+      ]
+    }
+  ],
+  "inferenceConfig": {
+    "maxTokens": 2048,
+    "stopSequences": [
+      "\n\nHuman:"
+    ],
+    "temperature": 1,
+    "topP": 1
+  },
+  "additionalModelRequestFields": {
+    "top_k": 250
+  }
+}
+
